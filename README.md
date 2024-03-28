@@ -1,12 +1,12 @@
 תאריך וזמן התחלה:  11:24🕛/27.03.2024
+
 תאריך וזמן סיום משימה:  00:56🕛/28.03.2024
 
 
 
-# ########################################### #
 # Doubly Linked List Multi-Threading Program  #
 # To Count Zero and one bits in each ELements #
-# ########################################### #
+###############################################
 
 ## Overview
 This program demonstrates multi-threading in C using a doubly linked list data structure. 
