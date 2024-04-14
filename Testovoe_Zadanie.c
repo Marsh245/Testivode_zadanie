@@ -75,6 +75,8 @@ void* countZeroBits(void* arg) {
             countZero++;
         }
     }
+    
+    oneBitCount = oneBitCount+( 32 - countZero);
 
     pthread_mutex_lock(&zeroBitMutex);
     zeroBitCount += countZero;
@@ -96,7 +98,11 @@ void* countOneBits(void* arg) {
             countOne++;
         }
     }
-
+  /*
+     an Integer is 32 bits, when getting the count of one bits we can simply do 32- (amount of ones) to get
+     zeros and vice versa*/
+    
+    zeroBitCount = zeroBitCount+( 32 - countOne);
     pthread_mutex_lock(&oneBitMutex);
     oneBitCount += countOne;
     oneBitNodesCount++;
